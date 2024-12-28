@@ -1,6 +1,7 @@
 # Daily MKV Processing Service
 
 This project provides a Python-based service designed to monitor a directory for `.mkv` files, process the audio tracks to convert DTS or TrueHD to EAC3 (if necessary), and manage file movement between input and output locations. The script is containerized using Docker for ease of deployment and includes flexible scheduling and runtime configurations.
+The purpose is to avoid audio transcoding with Plex remote clients.
 
 ---
 
