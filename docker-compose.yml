@@ -8,7 +8,7 @@ services:
       - ./logs:/app/logs:rw
     environment:
       - START_HOUR=11 
-      - RUN_IMMEDIATELY=true
+      - RUN_IMMEDIATELY=false
     restart: always
     healthcheck:
       test: ["CMD", "pgrep", "-f", "python"]
