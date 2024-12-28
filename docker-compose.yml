@@ -1,0 +1,17 @@
+---
+services:
+  the_boy_savior:
+    container_name: the_boy_savior
+    build: .
+    volumes:
+      - ./input:/app/input:rw
+      - ./logs:/app/logs:rw
+    environment:
+      - START_HOUR=11 
+      - RUN_IMMEDIATELY=true
+    restart: always
+    healthcheck:
+      test: ["CMD", "pgrep", "-f", "python"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
